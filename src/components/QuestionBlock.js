@@ -33,7 +33,7 @@ const QuestionBlock = ({ question, questions, setQuestions, index, scales, type 
         e.target.style.height = 'auto';
         e.target.style.height = `${e.target.scrollHeight-22}px`;
 
-        if(type == 'simple' && updatedQuestions[index].useRadio == false){
+        if(type === 'simple' && updatedQuestions[index].useRadio === false){
             const ee = e.target.parentElement.querySelector('select');
             ee.style.height = `${e.target.scrollHeight}px`;
         }
@@ -45,9 +45,9 @@ const QuestionBlock = ({ question, questions, setQuestions, index, scales, type 
     const handleScaleValueChange = (answerIndex, cc, e) => {
         const updatedQuestions = [...questions];
         const idi = question.answers[answerIndex].id
-        if (updatedQuestions[index].useRadio && type == 'simple') {
+        if (updatedQuestions[index].useRadio && type === 'simple') {
             updatedQuestions[index].answers.forEach((answer) => {
-                if(answer.id == idi){
+                if(answer.id === idi){
                     answer.changes.change_1.scaleValue = 1    
                 }
                 else{
@@ -136,8 +136,8 @@ const QuestionBlock = ({ question, questions, setQuestions, index, scales, type 
 
     const getAvailableScales = (answer, scaleId) => {
         const selectedScales = Object.values(answer.changes).map(change => change.scaleId);
-        let scls = scales.filter(scale => !selectedScales.includes(scale.id) || scale.id == scaleId)
-        if(scales.filter(scale => scale.id == scaleId).length == 0){
+        let scls = scales.filter(scale => !selectedScales.includes(scale.id) || scale.id === scaleId)
+        if(scales.filter(scale => scale.id === scaleId).length === 0){
             scls.unshift({id: 0, name: "Select a scale", color: "#000000"})
         }
         return scls;

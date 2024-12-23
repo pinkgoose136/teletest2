@@ -5,8 +5,6 @@ import { FaTrashAlt } from 'react-icons/fa';
 
 
 const TestCreationForm = ({ goToPreviousStep, testData, setTestData, goToNextStep }) => {
-    const [title, setTitle] = testData.title;
-    const [description, setDescription] = testData.description;
     const type = testData.type;
     
     const handleAddQuestion = () => {
