@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/teletest2/static/css/main.c6015c7b.css",
+    "main.js": "/teletest2/static/js/main.2d43e0ec.js",
+    "index.html": "/teletest2/index.html",
+    "main.c6015c7b.css.map": "/teletest2/static/css/main.c6015c7b.css.map",
+    "main.2d43e0ec.js.map": "/teletest2/static/js/main.2d43e0ec.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c6015c7b.css",
+    "static/js/main.2d43e0ec.js"
+  ]
+}
